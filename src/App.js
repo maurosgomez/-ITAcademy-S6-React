@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import Book from './book'
+import Library from './library.json'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// EXERCICI 4
 
-export default App;
+export default () => {
+
+    return (
+       <div>
+            {Library.map(book => {
+                return(
+                <>
+                    <h3>{book.titulo}</h3>
+                    <p>{book.autor}</p>
+                </>
+                ) 
+            })}
+        </div>
+    );
+}; 
