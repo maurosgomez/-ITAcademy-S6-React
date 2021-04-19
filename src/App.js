@@ -1,20 +1,13 @@
-import Book from './book'
-import Library from './library.json'
-
-// EXERCICI 4
+import Libro from './book.js';
+import library from './library.json';
 
 export default () => {
 
+    const libreria = library.map(book => <Libro titulo={book.titulo} autor={book.autor} />)
+
     return (
-       <div>
-            {Library.map(book => {
-                return(
-                <>
-                    <h3>{book.titulo}</h3>
-                    <p>{book.autor}</p>
-                </>
-                ) 
-            })}
+        <div>
+            {libreria}
         </div>
     );
-}; 
+};

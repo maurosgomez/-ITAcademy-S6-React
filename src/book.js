@@ -4,7 +4,7 @@ function Libro(props) {
 
     return (
         <div>
-            <h3>{props.titulo}</h3>
+            <h2>{props.titulo}</h2>
             <p>{props.autor}</p>
         </div>
     )
